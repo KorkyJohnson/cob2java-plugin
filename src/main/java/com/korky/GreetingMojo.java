@@ -1,4 +1,4 @@
-package com.hanna;
+package com.korky;
 
 import org.apache.maven.plugin.AbstractMojo;
 import org.apache.maven.plugin.MojoExecutionException;
