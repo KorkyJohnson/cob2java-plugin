@@ -23,6 +23,8 @@
     <maven.compiler.source>1.8</maven.compiler.source>
     <maven.compiler.target>1.8</maven.compiler.target>
     <maven.version>3.3.9</maven.version>
+    <cbl.path>C:\proj\cob2java\src\main\resources\cbl</cbl.path>
+    <java.path>C:\proj\cob2java\src\main\resources\java</java.path>
   </properties>
 
   <dependencies>
@@ -46,18 +48,25 @@
     <dependency>
       <groupId>commons-io</groupId>
       <artifactId>commons-io</artifactId>
-      <version>2.6</version>
+      <version>2.11.0</version>
     </dependency>
   </dependencies>
 
   <build>
     <plugins>
       <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-plugin-plugin</artifactId>
+        <version>3.4</version>
+      </plugin>
+      <plugin>
         <groupId>com.korky</groupId>
         <artifactId>cob2java</artifactId>
         <version>1.0-SNAPSHOT</version>
         <configuration>
           <greeting>Welcome Bob!</greeting>
+          <cblFolder>${cbl.path}</cblFolder>
+          <javaFolder>${java.path}</javaFolder>
         </configuration>
       </plugin>
     </plugins>
